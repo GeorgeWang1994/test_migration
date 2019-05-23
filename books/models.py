@@ -23,5 +23,6 @@ class Books(models.Model):
 
 class Publish(models.Model):
     name = models.CharField(max_length=100, verbose_name="出版商的名字")
+    boss = models.CharField(max_length=100, default="", verbose_name="老板名字")
     created_time = models.DateTimeField(null=True, auto_now_add=True, verbose_name="创建时间")
     modify_time = models.DateTimeField(null=True, auto_now=True, verbose_name="修改时间")
