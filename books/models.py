@@ -22,4 +22,5 @@ class Books(models.Model):
 
 class Publish(models.Model):
     name = models.CharField(max_length=100, verbose_name="出版商的名字")
+    desc = models.CharField(max_length=200, default="", verbose_name="书的简介")
     created_time = models.DateTimeField(null=True, auto_now_add=True, verbose_name="创建时间")
